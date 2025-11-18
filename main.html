@@ -1,16 +1,78 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>My Book List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-4">
+        My<span style="color: lightblue">Book</span>List
+      </h1>
+      <div class="form-group mt-3">
+        <form id="book-form">
+          <div class="mt-2">
+            <label for="title" class="form-label">Title</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="form-control"
+              required
+            />
+          </div>
 
-<html>
+          <div class="mt-2">
+            <label for="author" class="form-label">Author</label>
+            <input
+              type="text"
+              name="author"
+              id="author"
+              class="form-control"
+              required
+            />
+          </div>
 
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+          <div class="mt-2">
+            <label for="isbn" class="form-label">ISBN#</label>
+            <input
+              type="text"
+              name="isbn"
+              id="isbn"
+              class="form-control"
+              required
+            />
+          </div>
 
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+          <button type="submit" id="submit" class="btn btn-primary mt-2">
+            Add Book
+          </button>
+        </form>
+      </div>
 
-</body>
+      <div class="book-table">
+        <table class="table table-striped mt-4">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>ISBN#</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="book-list"></tbody>
+        </table>
+      </div>
+    </div>
 
+    <script src="app.js"></script>
+  </body>
 </html>
