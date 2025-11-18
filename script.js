@@ -11,14 +11,14 @@ bookForm.addEventListener("submit", function (e) {
   let author = authorInput.value.trim();
   let isbn = isbnInput.value.trim();
 
-  const tr = document.createElement("tr");
-  tr.innerHTML = `
+  const row = document.createElement("tr");
+  row.innerHTML = `
       <td>${title}</td>
       <td>${author}</td>
       <td>${isbn}</td>
       <td><button class="btn btn-danger btn-sm delete">Delete</button></td>
     `;
-  bookList.appendChild(tr);
+  bookList.appendChild(row);
 
   titleInput.value = "";
   authorInput.value = "";
